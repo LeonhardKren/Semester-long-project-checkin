@@ -12,6 +12,7 @@
 		FA1319CF233B261F0056A9FB /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1319CD233B261F0056A9FB /* Platform.cpp */; };
 		FA8BFBD22355C1ED008D16F8 /* Levels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA8BFBD02355C1ED008D16F8 /* Levels.cpp */; };
 		FAA1DCED23274ABA00526A4E /* Jump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DCEB23274ABA00526A4E /* Jump.cpp */; };
+		FAC9973A2369863F00F8C7AF /* Killplatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAC997382369863F00F8C7AF /* Killplatform.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -214,6 +215,8 @@
 		FA8BFBD12355C1ED008D16F8 /* Levels.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Levels.hpp; sourceTree = "<group>"; };
 		FAA1DCEB23274ABA00526A4E /* Jump.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Jump.cpp; sourceTree = "<group>"; };
 		FAA1DCEC23274ABA00526A4E /* Jump.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jump.h; sourceTree = "<group>"; };
+		FAC997382369863F00F8C7AF /* Killplatform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Killplatform.cpp; sourceTree = "<group>"; };
+		FAC997392369863F00F8C7AF /* Killplatform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Killplatform.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,13 +544,15 @@
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				FAC997382369863F00F8C7AF /* Killplatform.cpp */,
+				FAC997392369863F00F8C7AF /* Killplatform.hpp */,
 				FA8BFBD02355C1ED008D16F8 /* Levels.cpp */,
 				FA8BFBD12355C1ED008D16F8 /* Levels.hpp */,
 				FA1319CD233B261F0056A9FB /* Platform.cpp */,
 				FA1319CE233B261F0056A9FB /* Platform.h */,
 				FAA1DCEB23274ABA00526A4E /* Jump.cpp */,
 				FAA1DCEC23274ABA00526A4E /* Jump.h */,
-				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -652,6 +657,7 @@
 			files = (
 				FAA1DCED23274ABA00526A4E /* Jump.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				FAC9973A2369863F00F8C7AF /* Killplatform.cpp in Sources */,
 				FA1319CF233B261F0056A9FB /* Platform.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				FA8BFBD22355C1ED008D16F8 /* Levels.cpp in Sources */,

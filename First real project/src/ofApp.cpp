@@ -30,6 +30,7 @@ void ofApp::draw(){
     Plat.draw();
     cout<<(levels.level);
     levels.istouching(&hop);
+    
     if(levels.level==1)
     {
         levels.level1(&hop);
@@ -37,6 +38,22 @@ void ofApp::draw(){
     if(levels.level==2)
     {
         levels.level2(&hop);
+    }
+    if(levels.level==3)
+    {
+        levels.level3(&hop);
+    }
+    if(levels.level==4)
+    {
+        levels.level4(&hop);
+    }
+    if(levels.level==5)
+    {
+        levels.level5(&hop);
+    }
+    if(levels.level==6)
+    {
+        levels.level6(&hop);
     }
     
     

@@ -11,13 +11,44 @@ void Platform:: setup()
 {
     //x=rand()%600;
    // y=rand()%1000;
-    platwidth=100;
-    platheight=20;
+   // platwidth=100;
+  //  platheight=20;
+    isdeadly=false;
+    issticky=false;
+    isheavy=false;
+    jumpthrough=false;
+    stone.load("stone.png");
 }
 
 void Platform:: draw()
 {
-    ofDrawRectangle(x,y, platwidth, platheight);
+    if(isdeadly)
+    {
+        ofSetColor(255, 0, 0);
+        ofDrawRectangle(x,y, platwidth, platheight);
+    }
+    else if(issticky)
+    {
+        ofSetColor(0,255,0);
+        ofDrawRectangle(x,y, platwidth, platheight);
+    }
+    else if(isheavy)
+    {
+        ofSetColor(72, 35, 105);
+        ofDrawRectangle(x,y, platwidth, platheight);
+    }
+    else if(jumpthrough)
+    {
+        ofSetColor(251,255,0);
+        ofDrawRectangle(x,y, platwidth, platheight);
+    }
+    else
+    {
+        ofSetColor(255,255,255);
+        stone.draw(x,y, platwidth, platheight);
+    }
+    
+    
   
 }
 
@@ -27,6 +58,7 @@ void Platform:: position(int Xpos, int Ypos, int width, int height)
     y=Ypos;
     platwidth=width;
     platheight=height;
+    stone.load("stone.png");
 }
 
 bool Platform :: istouchingtop(Jumping* player)
@@ -102,7 +134,7 @@ bool Platform:: istouchingbottom(Jumping*player)
            ||(player->position.x>x
               &&player->position.x<x+platwidth))
         {
-            player->stopvertical();
+           // player->stopvertical();
             return true;
         }
         else

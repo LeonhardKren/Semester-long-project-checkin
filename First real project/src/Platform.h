@@ -20,10 +20,15 @@ public:
     bool istouchingleft(Jumping*player);
     bool istouchingright(Jumping*player);
     bool istouchingbottom(Jumping*player);
-    
+    bool isdeadly;
+    bool issticky;
+    bool isheavy;
+    bool jumpthrough;
     int x;
     int y;
     int platwidth;
     int platheight;
+    ofImage stone;
+    
 };
 #endif /* Platform_hpp */

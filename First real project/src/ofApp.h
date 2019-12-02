@@ -4,13 +4,13 @@
 #include "Jump.h"
 #include "Platform.h"
 #include "Levels.hpp"
+#include "Killplatform.hpp"
 class ofApp : public ofBaseApp{
 
 	public:
 		void setup();
 		void update();
 		void draw();
-
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
@@ -26,4 +26,5 @@ class ofApp : public ofBaseApp{
     Platform Plat;
     Platform Platforms[100];
     Level levels;
+   
 };

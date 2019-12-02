@@ -9,9 +9,12 @@
 
 void Jumping:: setup()
 {
-    position = ofVec2f(400,400);
+    lowjumpforce=5;
+    normaljumpforce=15;
+    highjumpforce=30;
+    position = ofVec2f(200,600);
     gravity = ofVec2f(0,0);
-    jumpforce =ofVec2f(0,15);
+    jumpforce =ofVec2f(0,normaljumpforce);
     previouspos = ofVec2f(0,0);
     speed = ofVec2f(0,0);
     width=50;
@@ -75,13 +78,27 @@ void Jumping:: checkbottom()
 {
     direction.y=gravity.y;
     position.y+=10;
-    //IMPORTANT CODE FOR STICKING ON THE TOP (STICKY PLATFORMS)
-   // direction.y=0;
-   // gravity.y=5;
+}
+void Jumping:: sticky()
+{
+    direction.y=0;
+}
+void Jumping:: lowjump()
+{  
+    gravity.y=1;
 }
 void Jumping::stopvertical()
 {
-    direction.y=5;
+    direction.y=0;
+    
+}
+void Jumping::killplayer()
+{
+    jumps=0;
+}
+void Jumping:: fadethrough()
+{
+    gravity.y+=0;
 }
 void Jumping:: keyPressed(int key)
 {

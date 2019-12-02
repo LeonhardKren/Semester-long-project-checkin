@@ -22,6 +22,10 @@ public:
     void checkright();
     void checkbottom();
     void stopvertical();
+    void sticky();
+    void killplayer();
+    void lowjump();
+    void fadethrough();
     
     ofVec2f jumpforce;
     ofVec2f gravity;
@@ -33,6 +37,9 @@ public:
     int width;
     int height;
     int jumps;
+    int lowjumpforce;
+    int normaljumpforce;
+    int highjumpforce;
     
 };
 
