@@ -190,6 +190,10 @@ void Level:: level2(Jumping*player)
 }
 void Level:: level3(Jumping*player)
 {
+    if(level3loaded==false)
+    {
+        level3loaded=true;
+        
     respawnx=10;
     respawny=500;
     Platforms[1].position(0,0,20,450);
@@ -206,6 +210,7 @@ void Level:: level3(Jumping*player)
     Platforms[10].position(-40,650,70,600);
     Platforms[11].position(30,700,470,500);
     Platforms[11].isdeadly=true;
+    }
     if(player->position.x<0)
     {
         if(player->position.y<650
@@ -214,6 +219,7 @@ void Level:: level3(Jumping*player)
             level-=1;
             player->position.x=1010;
             platreset();
+            level2loaded=false;
         }
     }
     if(player->position.x>1020)
@@ -224,12 +230,17 @@ void Level:: level3(Jumping*player)
             level+=1;
             player->position.x=10;
             platreset();
+            level4loaded=false;
         }
     }
     
 }
 void Level:: level4(Jumping*player)
 {
+    if(level4loaded==false)
+    {
+        level4loaded=true;
+        
     respawnx=0;
     respawny=200;
     Platforms[1].position(0,0,20,100);
@@ -259,7 +270,7 @@ void Level:: level4(Jumping*player)
     Platforms[16].isdeadly=true;
     Platforms[17].position(800,700,80,20);
     Platforms[17].isdeadly=true;
-    
+    }
     
     if(player->position.x<-10)
     {
@@ -269,6 +280,7 @@ void Level:: level4(Jumping*player)
             level-=1;
             player->position.x=1010;
             platreset();
+            level3loaded=false;
             
         }
     }
@@ -280,12 +292,17 @@ void Level:: level4(Jumping*player)
             level+=1;
             player->position.x=0;
             platreset();
+            level5loaded=false;
         }
     }
 }
 
 void Level:: level5(Jumping*player)
 {
+    if(level5loaded==false)
+    {
+        level5loaded=true;
+        
     respawnx=10;
     respawny=640;
     Platforms[0].position(0,0,20,500);
@@ -312,7 +329,7 @@ void Level:: level5(Jumping*player)
     Platforms[14].isheavy=true;
     Platforms[15].position(850, 280, 160, 20);
     Platforms[15].jumpthrough=true;
-    
+    }
     if(player->position.x<-10)
     {
       if(player->position.y>500
@@ -321,6 +338,7 @@ void Level:: level5(Jumping*player)
           level-=1;
           player->position.x=1000;
           platreset();
+          level4loaded=false;
       }
     }
     if(player->position.x>1010)
@@ -331,16 +349,21 @@ void Level:: level5(Jumping*player)
             level+=1;
             player->position.x=0;
             platreset();
+            level6loaded=false;
         }
     }
 }
 
 void Level:: level6(Jumping*player)
 {
+    if(level6loaded==false)
+    {
+        level6loaded=true;
+        
     Platforms[0].position(0,0,1100,20);
     Platforms[1].position(-10,200,30,700);
     Platforms[2].position(0,700,1100,300);
     Platforms[3].position(1010,0,20,800);
-    
+    }
     //GOOD IDEA TELEPORTER PLATFORMS!!!!!
 }

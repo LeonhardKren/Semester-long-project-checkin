@@ -17,7 +17,10 @@ void Platform:: setup()
     issticky=false;
     isheavy=false;
     jumpthrough=false;
+    key=false; 
     stone.load("stone.png");
+    ofDisableArbTex();
+    ofLoadImage(stones,"stone.png");
 }
 
 void Platform:: draw()
@@ -41,11 +44,14 @@ void Platform:: draw()
     {
         ofSetColor(251,255,0);
         ofDrawRectangle(x,y, platwidth, platheight);
+        
     }
     else
     {
         ofSetColor(255,255,255);
-        stone.draw(x,y, platwidth, platheight);
+      //  stone.bind();
+        ofDrawRectangle(x,y,platwidth,platheight);
+      //  stone.unbind();
     }
     
     
@@ -58,7 +64,26 @@ void Platform:: position(int Xpos, int Ypos, int width, int height)
     y=Ypos;
     platwidth=width;
     platheight=height;
-    stone.load("stone.png");
+   /* stone.load("stone.png");
+    quad.addVertex(ofVec3f(x,y));
+    quad.addVertex(ofVec3f(x+platwidth,y));
+    quad.addVertex(ofVec3f(x+platwidth,y+platheight));
+    
+    
+    quad.addVertex(ofVec3f(x+platwidth,y+platheight));
+    quad.addVertex(ofVec3f(x,y+platheight));
+    quad.addVertex(ofVec3f(x,y));
+    
+    quad.addTexCoord(ofVec2f(x,y));
+    quad.addTexCoord(ofVec2f(x+platwidth,y));
+    quad.addTexCoord(ofVec2f(x+platwidth,y+platheight));
+    
+    quad.addTexCoord(ofVec2f(x+platwidth,y+platheight));
+    quad.addTexCoord(ofVec2f(x,y+platheight));
+    quad.addTexCoord(ofVec2f(x,y));
+    
+    quad.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+    */
 }
 
 bool Platform :: istouchingtop(Jumping* player)

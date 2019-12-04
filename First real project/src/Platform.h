@@ -24,11 +24,14 @@ public:
     bool issticky;
     bool isheavy;
     bool jumpthrough;
+    bool key;
     int x;
     int y;
     int platwidth;
     int platheight;
     ofImage stone;
+    ofMesh quad;
+    ofTexture stones;
     
 };
 #endif /* Platform_hpp */
